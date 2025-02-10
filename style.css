@@ -1,8 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-color:lavender;
+    background-color: lavender;
     text-align: center;
     padding: 50px;
+    margin: 0;
 }
 
 .card {
@@ -11,8 +12,9 @@ body {
     padding: 30px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
-    max-height: 800;
+    max-height: 800px;
     margin: 0 auto;
+    width: 100%; /* Ensure the card takes full width on small screens */
 }
 
 button {
@@ -25,6 +27,7 @@ button {
     margin: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%; /* Make buttons responsive */
 }
 
 button:hover {
@@ -50,6 +53,7 @@ button:hover {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%; /* Make next step buttons responsive */
 }
 
 #nextStep button:hover {
@@ -57,9 +61,9 @@ button:hover {
 }
 
 .mood-button.selected {
-    background-color: #4b0082; /* A darker shade of your choice */
-    color: white; /* Change text color to white when selected */
-    border: 2px solid #ffffff; /* Optional, to make it pop more */
+    background-color: #4b0082;
+    color: white;
+    border: 2px solid #ffffff;
 }
 
 #message {
@@ -69,12 +73,59 @@ button:hover {
 
 a {
     color: #007bfff6; 
-    text-decoration: none; /*removing line*/
+    text-decoration: none;
 }
 
 a:visited {
-    color: #007bfff6; /* same color as normal */
+    color: #007bfff6;
 }
 
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
 
+    .card {
+        padding: 20px;
+        width: 100%; /* Make card width 100% on smaller screens */
+    }
 
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #questions img {
+        width: 100%;
+    }
+
+    #nextStep button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #media-container {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 14px; /* Adjust button font size for very small screens */
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    #questions img {
+        width: 100%;
+    }
+
+    #nextStep button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
