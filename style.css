@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: lavender;
+    background-color:lavender;
     text-align: center;
-    padding: 20px; /* Adjust padding for better spacing */
+    padding: 50px;
 }
 
 .card {
@@ -11,9 +11,8 @@ body {
     padding: 30px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
+    max-height: 800;
     margin: 0 auto;
-    width: 100%; /* Ensure it takes up the full width */
-    box-sizing: border-box; /* Prevents overflow */
 }
 
 button {
@@ -26,7 +25,6 @@ button {
     margin: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%; /* Make buttons responsive */
 }
 
 button:hover {
@@ -52,7 +50,6 @@ button:hover {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%; /* Make next step button responsive */
 }
 
 #nextStep button:hover {
@@ -60,9 +57,9 @@ button:hover {
 }
 
 .mood-button.selected {
-    background-color: #4b0082;
-    color: white;
-    border: 2px solid #ffffff;
+    background-color: #4b0082; /* A darker shade of your choice */
+    color: white; /* Change text color to white when selected */
+    border: 2px solid #ffffff; /* Optional, to make it pop more */
 }
 
 #message {
@@ -71,39 +68,12 @@ button:hover {
 }
 
 a {
-    color: #007bfff6;
-    text-decoration: none;
+    color: #007bfff6; 
+    text-decoration: none; /*removing line*/
 }
 
 a:visited {
-    color: #007bfff6;
+    color: #007bfff6; /* same color as normal */
 }
 
-/* Add media queries for better responsiveness on smaller screens */
-@media (max-width: 768px) {
-    .card {
-        padding: 20px; /* Reduce padding on small screens */
-        margin-top: 10px;
-    }
-    button {
-        font-size: 16px; /* Adjust font size for mobile */
-        padding: 12px;
-    }
-    #nextStep button {
-        font-size: 16px; /* Adjust font size for mobile */
-    }
-    #message {
-        font-size: 18px; /* Adjust font size for mobile */
-    }
-}
 
-/* Make sure images do not exceed the screen width */
-@media (max-width: 480px) {
-    .card {
-        width: 100%; /* Full width on very small screens */
-    }
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
